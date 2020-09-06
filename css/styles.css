@@ -43,10 +43,10 @@ img {
 
 .container {
   width: 1230px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .flexbox {
@@ -71,6 +71,9 @@ a {
   display: flex;
   align-items: center;
   margin-left: auto;
+}
+
+header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -161,12 +164,6 @@ a {
 
 /* mail,telefon*/
 
-.mail-box-item {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-}
-
 .mail {
   color: var(--primaru-text-color);
   font-family: Roboto;
@@ -176,33 +173,36 @@ a {
   line-height: 16px;
 }
 
-/*.mail::before {
-  display: inline-flex;
-  content: "";
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  background-image: url("../icon/envelope.svg");
-}*/
-
-.telefon {
+/*.telefon {
   color: var(--primaru-text-color);
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+}*/
+
+.mail-box-item {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--primaru-text-color);
 }
-.mail-box-item,
+
+.mail:hover .mail-box-item,
+.mail:focus .mail-box-item {
+  fill: var(--accent-color);
+}
+
 .mail:hover,
 .mail:focus {
   color: var(--accent-color);
 }
 
-.telefon:hover,
+/*.telefon:hover,
 .telefon:focus {
   color: var(--accent-color);
-}
+}*/
 
 .mail-box {
   display: flex;
@@ -299,6 +299,10 @@ a {
   margin-right: 30px;
 }
 
+.title {
+  margin-top: 30px;
+}
+
 .text-list::before {
   display: block;
   content: "";
@@ -329,6 +333,10 @@ a {
   margin-right: 0;
 }
 
+.about-us {
+  padding-bottom: 0;
+}
+
 /* Command List */
 
 .section-title {
@@ -340,6 +348,8 @@ a {
   font-size: 36px;
   line-height: 42px;
   letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .command {
@@ -364,6 +374,8 @@ a {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .profession {
@@ -397,6 +409,8 @@ a {
 
 .icon {
   display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
 }
 
 .icon-item {
@@ -410,17 +424,29 @@ a {
 }
 
 .icon-item-list {
-  justify-content: center;
-  align-items: center;
+  display: flex;
   width: 44px;
   height: 44px;
-  background-color: var(--hero-title);
+  /*background-color: var(--hero-title);*/
   border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-item-list:hover,
+.icon-item-list:focus {
+  background-color: var(--accent-color);
 }
 
 .social-icon {
   width: 20px;
   height: 20px;
+  fill: #afb1b8;
+}
+
+.icon-item-list:hover .social-icon,
+.icon-item-list:focus .social-icon {
+  fill: var(--hero-title);
 }
 
 /*regular customers*/
@@ -438,7 +464,7 @@ a {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--title-color);
+  color: var(--title-text-color);
 }
 
 .customers {
@@ -486,10 +512,19 @@ a {
   margin-left: 100px;
 }*/
 
-/*.basement-sectioon {
-  /*display: flex;
-  padding-top: 60px;
-}*/
+.basement-section {
+  display: flex;
+}
+
+.basement-section address {
+  margin-top: 20px;
+  margin-right: 70px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--hero-title);
+}
 
 .logo-2 {
   color: var(--accent-color);
@@ -505,8 +540,9 @@ a {
   color: var(--hero-title);
 }
 
-/*.address {
-}*/
+.mailtel-list {
+  margin-top: 9px;
+}
 
 .address-name {
   color: var(--hero-title);
@@ -524,6 +560,47 @@ a {
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+}
+
+.subscribe {
+  margin-top: 12px;
+}
+
+.subscribe b {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--hero-title);
+}
+
+.subscribe-list {
+  display: flex;
+  margin-top: 20px;
+}
+
+.subscribe-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.subscribe-list li {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-icon {
+  display: flex;
+  fill: var(--hero-title);
+}
+
+.subscribe-list li:hover {
+  background-color: var(--accent-color);
 }
 
 /* Portfolio */
